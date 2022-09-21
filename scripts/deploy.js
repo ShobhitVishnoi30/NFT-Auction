@@ -15,12 +15,19 @@ async function main() {
 
   const accounts = await hre.ethers.getSigners();
 
-   // Deploy WhaleNFT contract
+  // Deploy WhaleNFT contract
   const WhaleNFT = await hre.ethers.getContractFactory("WhaleNFT");
   const whaleFT = await WhaleNFT.deploy("WhaleNFT", "WNFT");
 
   await whaleFT.deployed();
   console.log("WhaleNFT deployed to: ", whaleFT.address);
+
+  // Deploy ClockAuction contract
+  const ClockAuction = await hre.ethers.getContractFactory("ClockAuction");
+  const clockAuction = await ClockAuction.deploy(whaleFT.address);
+
+  await clockAuction.deployed();
+  console.log("ClockAuction deployed to: ", clockAuction.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
