@@ -1,0 +1,43 @@
+{
+  "name": "nft-auction",
+  "version": "1.0.0",
+  "description": "A nft auction contract which is used to buy and sell nft",
+  "main": "contracts/",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "deploy": "npx hardhat run ./scripts/deploy.js",
+    "clean": "npx hardhat clean",
+    "lint:sol": "solhint --config .solhint.json  contracts/*.sol",
+    "prettier": "prettier --write  contracts/*.sol",
+    "prettier:list-different": "prettier --config .prettierrc --list-different **/*.{js,sol}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShobhitVishnoi30/NFT-AUCTION.git"
+  },
+  "keywords": [
+    "NFT",
+    "Auction",
+    "Ethereum",
+    "solidity"
+  ],
+  "author": "Shobhit Vishnoi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShobhitVishnoi30/NFT-AUCTION/issues"
+  },
+  "homepage": "https://github.com/ShobhitVishnoi30/NFT-AUCTION#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+    "@openzeppelin/contracts": "^4.7.3",
+    "dotenv": "^16.0.1",
+    "hardhat": "^2.10.1",
+    "hardhat-gas-reporter": "^1.0.8",
+    "prettier": "^2.7.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.24",
+    "solhint": "^3.3.7",
+    "solhint-plugin-prettier": "^0.0.5",
+    "solidity-coverage": "^0.7.21"
+  }
+}
